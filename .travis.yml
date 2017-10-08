@@ -1,6 +1,4 @@
 language: ruby
-rvm:
-  - 2.3.3
 
 before_script:
   - curl https://raw.githubusercontent.com/Arthaey/spark_pr/bar/spark_pr.rb -o spark_pr.rb
