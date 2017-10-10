@@ -11,15 +11,15 @@ class Config
   SCP_HOST_ENV_VAR     = "SCP_HOST"
   SCP_DIR_ENV_VAR      = "SCP_DIR"
 
-  def initialize(filenameOrYaml)
+  def initialize(filenameOrYaml = "")
     yamlExts = %w(.yml .yaml)
     if File.exist?(filenameOrYaml)
       @filename = filenameOrYaml
-      @config = YAML.load_file(@filename)
+      @config = YAML.load_file(@filename) || {}
     elsif yamlExts.include?(File.extname(filenameOrYaml))
       raise Errno::ENOENT.new(filenameOrYaml)
     else
-      @config = YAML.load(filenameOrYaml)
+      @config = YAML.load(filenameOrYaml) || {}
     end
 
     validate!

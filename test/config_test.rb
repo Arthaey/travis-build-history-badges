@@ -91,6 +91,24 @@ class ConfigTest < Minitest::Test
     assert_raises("filename or YAML string") { config = Config.new("") }
   end
 
+  def test_can_use_env_vars_for_everything
+    ENV[Config::ACCESS_TOKEN_ENV_VAR] = "123abc"
+    ENV[Config::TRAVIS_OWNER_ENV_VAR] = "MyUsername"
+    ENV[Config::SCP_USERNAME_ENV_VAR] = "ScpUsername"
+    ENV[Config::SCP_PASSWORD_ENV_VAR] = "ScpPassword"
+    ENV[Config::SCP_HOST_ENV_VAR] = "example.com"
+    ENV[Config::SCP_DIR_ENV_VAR] = "a/b/c"
+
+    config = Config.new
+
+    assert_equal("123abc", config.access_token)
+    assert_equal("MyUsername", config.owner)
+    assert_equal("ScpUsername", config.scp_username)
+    assert_equal("ScpPassword", config.scp_password)
+    assert_equal("example.com", config.scp_host)
+    assert_equal("a/b/c", config.scp_directory)
+  end
+
   def test_requires_Travis_owner_name
     yaml = <<~YAML_END
       travis:
