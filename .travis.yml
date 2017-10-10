@@ -7,5 +7,5 @@ before_script:
   - curl https://raw.githubusercontent.com/Arthaey/spark_pr/bar/spark_pr.rb -o lib/spark_pr.rb
 
 script:
-  - rake test
-  - ruby bin/travis-build-history-badges.rb
+  - test $RUN_TESTS && rake test
+  - test $UPDATE_BADGES && ruby bin/travis-build-history-badges.rb
