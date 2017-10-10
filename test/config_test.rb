@@ -88,6 +88,13 @@ class ConfigTest < Minitest::Test
   end
 
   def test_throws_if_empty_string_config
+    ENV[Config::ACCESS_TOKEN_ENV_VAR] = nil
+    ENV[Config::TRAVIS_OWNER_ENV_VAR] = nil
+    ENV[Config::SCP_USERNAME_ENV_VAR] = nil
+    ENV[Config::SCP_PASSWORD_ENV_VAR] = nil
+    ENV[Config::SCP_HOST_ENV_VAR] = nil
+    ENV[Config::SCP_DIR_ENV_VAR] = nil
+
     assert_raises("filename or YAML string") { config = Config.new("") }
   end
 
