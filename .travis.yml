@@ -1,5 +1,8 @@
 language: ruby
 
+install:
+  - bundle install --with test
+
 before_script:
   - curl https://raw.githubusercontent.com/Arthaey/spark_pr/bar/spark_pr.rb -o lib/spark_pr.rb
 
