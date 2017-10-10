@@ -1,4 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'travis'
 gem 'net-scp'
+gem 'travis'
+
+group :test do
+  gem 'minitest'
+  gem 'rake'
+  gem 'simplecov'
+end

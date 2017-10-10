@@ -1,0 +1,19 @@
+travis:
+  owner: MyGithubUsername
+# access_token: set via env var $TRAVIS_ACCESS_TOKEN
+# repos:
+#   - foo
+#   - bar
+
+upload:
+  host: my-image-host-server.example.com
+  dir: images/public/travis-build-badges
+  username: MyScpUsername
+# password: set via env var $SCP_PASSWORD
+
+# Available environment variables:
+#   $TRAVIS_ACCESS_TOKEN
+#   $SCP_USERNAME
+#   $SCP_PASSWORD
+#   $SCP_HOST
+#   $SCP_DIR

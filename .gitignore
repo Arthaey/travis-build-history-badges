@@ -1,0 +1,5 @@
+config.yml
+coverage/
+
+# should be downloaded separately; TODO: git submodule?
+lib/spark_pr.rb
