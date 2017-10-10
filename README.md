@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/Arthaey/travis-build-history-badges.svg?branch=master)](https://travis-ci.org/Arthaey/travis-build-history-badges)
 [![Build History](http://www.arthaey.com/images/travis-build-badges/Arthaey-travis-build-history-badges.png)](https://travis-ci.org/Arthaey/travis-build-history-badges/builds)
 
-Generates badges for Travis build histories.
+Generates badges for Travis build histories. For example, the little red and/or green bar chart above this text. :)
 
 # Example
 
