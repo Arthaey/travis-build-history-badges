@@ -8,4 +8,4 @@ before_script:
 
 script:
   - rake test
-  - ruby travis-build-history-badges.rb
+  - ruby bin/travis-build-history-badges.rb
