@@ -1,6 +1,6 @@
-require_relative "lib/config.rb"
-require_relative "lib/badge_creator.rb"
-require_relative "lib/badge_updater.rb"
+require_relative "../lib/config.rb"
+require_relative "../lib/badge_creator.rb"
+require_relative "../lib/badge_updater.rb"
 
 module TravisBuildHistoryBadge
   def self.run!
