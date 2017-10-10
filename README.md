@@ -1,7 +1,7 @@
 [![Bugs](https://img.shields.io/github/issues/Arthaey/travis-build-history-badges/bug.svg)](https://github.com/Arthaey/travis-build-history-badges/issues?q=is:open+is:issue+label:bug)
 [![Build Status](https://travis-ci.org/Arthaey/travis-build-history-badges.svg?branch=master)](https://travis-ci.org/Arthaey/travis-build-history-badges)
 [![Coverage Status](https://coveralls.io/repos/github/Arthaey/travis-build-history-badges/badge.svg?branch=master)](https://coveralls.io/github/Arthaey/travis-build-history-badges?branch=master)
-[![Code Climate](https://codeclimate.com/github/Arthaey/travis-build-history-badges.png)](https://codeclimate.com/github/Arthaey/travis-build-history-badges)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f8759e9e312fb6d83d18/maintainability)](https://codeclimate.com/github/Arthaey/travis-build-history-badges/maintainability)
 
 Generates badges for Travis build histories.
 
