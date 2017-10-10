@@ -14,6 +14,7 @@ module TravisBuildHistoryBadge
 
       data = []
       repo.each_build do |build|
+        next unless build.duration
         color = BUILD_COLORS[build.color.to_sym] || SparkCanvas::GRAY
         data.push(build.duration => color)
       end
