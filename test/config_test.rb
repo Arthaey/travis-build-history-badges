@@ -97,6 +97,7 @@ class ConfigTest < Minitest::Test
         foo: bar
     YAML_END
 
+    ENV[Config::TRAVIS_OWNER_ENV_VAR] = nil
     assert_raises("owner required") { config = Config.new(yaml) }
   end
 
@@ -143,7 +144,6 @@ class ConfigTest < Minitest::Test
     YAML_END
 
     ENV[Config::ACCESS_TOKEN_ENV_VAR] = nil
-
     assert_raises("access_token required") { config = Config.new(yaml) }
   end
 

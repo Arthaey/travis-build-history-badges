@@ -11,14 +11,9 @@ class Config
   SCP_HOST_ENV_VAR     = "SCP_HOST"
   SCP_DIR_ENV_VAR      = "SCP_DIR"
 
-  ROOT_DIR = File.expand_path(File.join(File.dirname(__FILE__), ".."))
-  DEFAULT_CONFIG_FILE = File.join(ROOT_DIR, "config.yml")
-
-  def initialize(filenameOrYaml = DEFAULT_CONFIG_FILE)
+  def initialize(filenameOrYaml)
     yamlExts = %w(.yml .yaml)
-    if filenameOrYaml.to_s.empty?
-      raise ArgumentError.new("filename or YAML string required")
-    elsif File.exist?(filenameOrYaml)
+    if File.exist?(filenameOrYaml)
       @filename = filenameOrYaml
       @config = YAML.load_file(@filename)
     elsif yamlExts.include?(File.extname(filenameOrYaml))
