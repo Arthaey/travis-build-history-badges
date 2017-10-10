@@ -23,8 +23,6 @@ module TravisBuildHistoryBadge
         raise "no builds found for #{repo.slug}"
       end
 
-      puts "Build data for #{repo.slug}: #{data.inspect}"
-
       File.open(filename, "wb" ) do |png|
         png << Spark.plot(
           data,
