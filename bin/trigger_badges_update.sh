@@ -11,7 +11,7 @@
 body='{
 "request": {
   "branch":"master",
-  "message":"Triggered by commit to $TRAVIS_REPO_SLUG.",
+  "message":"Triggered by commit to ' + $TRAVIS_REPO_SLUG + '.",
   "config": {
     "env": {
       "RUN_TESTS": 0,
