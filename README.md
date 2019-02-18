@@ -12,6 +12,8 @@ Generates badges for Travis build histories. For example, the little red and/or 
 
 1. a public **Github repo**
 1. **Travis CI** set up with your Github repo
+1. **Travis command-line tool**
+    - `gem install travis` _(Ruby is a prereq, obviously)_
 
 (If the two types of tokens are confusing, read
 [Travis's blog post](https://blog.travis-ci.com/2013-01-28-token-token-token)
@@ -26,11 +28,8 @@ Say your Github repo is at `https://github.com/MyUsername/my-repo`.
     - click "Generate new token" button with "public_repo" permissions
     - note the token — you will only get to see it once!
 
-1. Install the **Travis command-line tool**:
-    - `gem install travis` _(Ruby is a prereq, obviously)_
-
 1. Generate a **Travis token** from your Github token:
-    - `travis login --github-token &lt;personal-access-token&gt;`
+    - `travis login --github-token <personal-access-token>`
     - `travis token`
     - note the token — you will only get to see it once!
 
